@@ -1,10 +1,55 @@
 <h1>Animoos API</h1>
 
+<!-- <h1>Organization</h1> -->
+<h2>Technology</h2>
+
+<h3>Codebase: Python</h3>
+<p>Packages</p>
+<ul>
+  <li>Flask</li>
+  <li>Gunicorn</li>
+  <li>Requests</li>
+  <li>psycopg2</li>
+</ul>
+
 <h2>TODO</h2>
 <p>Rewrite these endpoints to use the V2 graphql API</p>
 <ul>
-  <li>GET bulk anime</li>
+  <li>GET featured anime</li>
   <li>GET anime by title</li>
   <li>GET anime by ID</li>
   <li>GET character by ID</li>
 </ul>
+
+<h3>Database: PostgreSQL</h3>
+<p>Tables</p>
+<p>Models</p>
+<p></p>
+<p></p>
+
+<h2>Server Structure</h2>
+
+
+<hr />
+<h1>Frontend</h1>
+<h2>Technology</h2>
+
+<h3>Codebase: ReactJS</h3>
+<p>Packages</p>
+<ul>
+  <li>React-Router</li>
+  <li>React-Materialize</li>
+  <li>Axios</li>
+  <li>Redux</li>
+  <li>Redux-thunk</li>
+</ul>
+
+
+<h2>Todo</h2>
+<ul>
+  <li>Sitemap</li>
+  <li>Wireframes</li>
+</ul>
+
+
+
