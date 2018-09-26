@@ -21,6 +21,8 @@ brew install python@2
 pip2.7 install virtualenv virtualenvwrapper
 mkvirtualenv v-animoos --python /usr/local/bin/python
 ```
+if mkvirtualenv is not found try running this command: `source /usr/local/bin/virtualenvwrapper.sh`
+
 
 And then to run the virtual environment
 `source v-animoos/bin/activate`
