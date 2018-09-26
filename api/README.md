@@ -17,6 +17,7 @@ if errors try: virtualenv -p /usr/bin/python2.7 v-animoos
 
 If that doesn't work it's not that much extra work to get this going. Try this block instead
 ```
+brew install python@2
 pip2.7 install virtualenv virtualenvwrapper
 mkvirtualenv v-animoos --python /usr/local/bin/python
 ```
@@ -31,8 +32,7 @@ Akin to install node_modules, python's package dependency's are noted in `requir
 to run the host on local, run
 `python routes.py`
 
-to test, run
-`curl http://localhost:3001/api/test`
+to test, run `curl http://localhost:3001/api/test` or visit that location in your browser.
 
 
 <!-- Load any ENV_VARS -->

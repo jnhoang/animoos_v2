@@ -1,6 +1,18 @@
 <h1>Animoos API</h1>
 
 <!-- <h1>Organization</h1> -->
+<h2>Getting Started</h2>
+
+<h3>API</h3>
+<p>
+  Start by getting the api running on your local machine, [here](https://github.com/jnhustin/animoos_v2/tree/master/api#getting-started) is the the link to that documentation
+</p>
+
+<h3>APP</h3>
+<p>
+  Start by getting the api running on your local machine, [here](https://github.com/jnhustin/animoos_v2/tree/master/app#getting-started) is the the link to that documentation
+</p>
+
 <h2>Technology</h2>
 
 <h3>Codebase: Python</h3>
