@@ -1,5 +1,5 @@
 # base image
-FROM python:2
+FROM python:2.7-slim
 
 # where the app will live in the container
 WORKDIR /usr/src/app
