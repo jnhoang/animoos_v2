@@ -41,3 +41,8 @@ to test, run `curl http://localhost:3001/api/test` or visit that location in you
 
 
 
+
+
+## API query resources
+
+https://github.com/AniList/ApiV2-GraphQL-Docs/tree/master/migration

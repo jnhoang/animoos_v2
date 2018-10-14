@@ -9,48 +9,48 @@ def test_route():
   
   # Here we define our query as a multi-line string
   query = '''
-  query ($id: Int) {                      # Define which variables will be used in the query (id)
-    Media (id: $id, type: ANIME) {        # Insert our variables into the query arguments (id) (type: ANIME is hard-coded in the query)
-      id
-      title {
-        romaji
-        english
-        native
-      }
-      startDate {
-        year
-        month
-        day
-      }
-      endDate {
-        year
-        month
-        day
-      }
-      coverImage {
-        large
-        medium
-      }
-      bannerImage
-      format
-      type
-      status
-      episodes
-      chapters
-      volumes
-      season
-      description
-      averageScore
-      meanScore
-      genres
-      synonyms
-      nextAiringEpisode {
-        airingAt
-        timeUntilAiring
-        episode
+    query ($id: Int) {                      # Define which variables will be used in the query (id)
+      Media (id: $id, type: ANIME) {        # Insert our variables into the query arguments (id) (type: ANIME is hard-coded in the query)
+        id
+        title {
+          romaji
+          english
+          native
+        }
+        startDate {
+          year
+          month
+          day
+        }
+        endDate {
+          year
+          month
+          day
+        }
+        coverImage {
+          large
+          medium
+        }
+        bannerImage
+        format
+        type
+        status
+        episodes
+        chapters
+        volumes
+        season
+        description
+        averageScore
+        meanScore
+        genres
+        synonyms
+        nextAiringEpisode {
+          airingAt
+          timeUntilAiring
+          episode
+        }
       }
     }
-  }
   '''
 
   # Define our query variables and values that will be used in the query request
@@ -60,7 +60,7 @@ def test_route():
 
 
   # Make the HTTP Api request
-  raw_res         = requests.post(url, json={'query': query, 'variables': variables})
+  raw_res         = requests.post(url, json={ 'query': query, 'variables': variables })
   res             = raw_res.json()
   stringified_res = json.dumps(res)
   
