@@ -1,9 +1,28 @@
 from flask import Flask
 
+# logging imports
+import logging
+from pythonjsonlogger import jsonlogger
+
+# project imports
 from api.config import Config
 
 
+
 # initialize app extensions here
+# configure logging
+formatter  = jsonlogger.JsonFormatter('(levelname), (message), (module), (asctime)')
+logger     = logging.getLogger()
+logHandler = logging.StreamHandler()
+logHandler.setFormatter(formatter)
+logger.addHandler(logHandler)
+
+# change log lvls here  ['INFO', 'DEBUG']
+logger.setLevel(logging.INFO)
+
+# Disable flask logging
+logging.getLogger('werkzeug').setLevel(logging.ERROR)
+
 
 
 # http://flask.pocoo.org/docs/0.12/patterns/appfactories/
@@ -24,7 +43,6 @@ def create_app(config_class=Config):
 
   app.register_blueprint(main)
 
-  print 'created app, starting now'
-
+  logging.info('created app, starting now')
   return app
 

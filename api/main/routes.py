@@ -1,10 +1,16 @@
 import json
+import requests
 from flask import Blueprint
 
+# project imports
+from api.utils import logging
 
 main = Blueprint('main', __name__)
+
+
 @main.route('/api/main/lifecheck/', methods=['GET'])
 def main_lifecheck():
+  logging.info('lifecheck received a request')
   sample_return_object = {
     'message':  'here is a simple object to be returned to a requester' \
                 'note the backslash on the previous line is used to extend ' \
@@ -13,6 +19,7 @@ def main_lifecheck():
     'status_code': 200,
     'random_list': [0, '1', 'two', {'obj': 'whoa' }]
   }
+  logging.info('returning a reponse to requester')
   return json.dumps(sample_return_object)
 
 
