@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import Home from './Home';
-import Navbar from './Navbar';
+import AnimoosNavbar from './AnimoosNavbar';
 
 class App extends Component {
   render() {
     return (
 	  <div>
-	  	  <Navbar />	
+	  	  <AnimoosNavbar />	
       	  <Home />
       </div>
     );
