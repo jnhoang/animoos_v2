@@ -8,7 +8,7 @@ from api.utils import logging
 main = Blueprint('main', __name__)
 
 
-@main.route('/api/main/lifecheck/', methods=['GET'])
+@main.route('/api/', methods=['GET'])
 def main_lifecheck():
   logging.info('lifecheck received a request')
   sample_return_object = {
