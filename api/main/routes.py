@@ -1,9 +1,22 @@
-from flask import Flask
 import json
-import requests
-app = Flask(__name__)
+from flask import Blueprint
 
-@app.route('/api/test', methods=['GET'])
+
+main = Blueprint('main', __name__)
+@main.route('/api/main/lifecheck/', methods=['GET'])
+def main_lifecheck():
+  sample_return_object = {
+    'message':  'here is a simple object to be returned to a requester' \
+                'note the backslash on the previous line is used to extend ' \
+                'a multi-line comment. This object is stringified (json.dumps())' \
+                'before being returned to the requester',
+    'status_code': 200,
+    'random_list': [0, '1', 'two', {'obj': 'whoa' }]
+  }
+  return json.dumps(sample_return_object)
+
+
+@main.route('/api/test', methods=['GET'])
 def test_route(): 
   url       = 'https://graphql.anilist.co'
   
@@ -70,15 +83,3 @@ def test_route():
   print '\n\nthis is the res after formatting it with json(): ', res
   print 'this is what the res looks like after reformatting it: ', stringified_res
   return stringified_res
-
-
-
-
-
-
-
-
-
-if __name__ == '__main__':
-  app.debug = True
-  app.run(host='0.0.0.0', port=3001)
