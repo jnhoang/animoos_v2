@@ -32,7 +32,7 @@ Akin to install node_modules, python's package dependency's are noted in `requir
 `pip install -r requirements.txt`
 
 to run the host on local, run
-`python routes.py`
+`python run.py in the root folder`
 
 to test, run `curl http://localhost:3001/api/test` or visit that location in your browser.
 
