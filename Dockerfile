@@ -17,4 +17,5 @@ ADD . /app
 EXPOSE 5999
 
 # give the container commands to run
-CMD [ "python", "run.py" ]
+CMD /app/docker_entrypoint.sh
+
