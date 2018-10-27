@@ -2,17 +2,20 @@
 FROM python:2.7-slim
 
 # where the app will live in the container
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # install any requirements to workdir
-COPY api/requirements.txt ./
+ADD requirements.txt /app
+
+# install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# first dot is project directory, second dot is container workdir
-COPY . .
+# copy the current directory contents into the container at /app
+ADD . /app
 
 # expose port
-EXPOSE 3001
+EXPOSE 5999
 
 # give the container commands to run
-CMD [ "python", "api/routes.py" ]
+CMD /app/docker_entrypoint.sh
+
