@@ -34,7 +34,7 @@ Akin to install node_modules, python's package dependency's are noted in `requir
 to run the host on local, run
 `python run.py in the root folder`
 
-to test, run `curl http://localhost:3001/api/test` or visit that location in your browser.
+to test, run `curl http://localhost:5999/api/test` or visit that location in your browser.
 
 
 <!-- Load any ENV_VARS -->
