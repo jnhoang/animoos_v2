@@ -2,7 +2,7 @@
 
 <!-- <h1>Organization</h1> -->
 <h2>Getting Started</h2>
-
+https://github.com/AniList/ApiV2-GraphQL-Docs/blob/master/book/migrating-from-apiv1/media-anime-and-manga.md
 <h3>API</h3>
 <p>
   Start by getting the api running on your local machine, [here](https://github.com/jnhustin/animoos_v2/tree/master/api#getting-started) is the the link to that documentation
