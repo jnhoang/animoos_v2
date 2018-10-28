@@ -39,9 +39,11 @@ def create_app(config_class=Config):
 
   
   # REGISTER BLUEPRINTS (blocks of code for routes)
-  from api.main.routes import main
+  from api.main.routes    import main
+  from api.anilist.routes import anilist
 
   app.register_blueprint(main)
+  app.register_blueprint(anilist)
 
   logging.info('created app, starting now')
   return app
